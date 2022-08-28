@@ -1,8 +1,16 @@
+<script setup>
+import VueCountdown from '@chenfengyuan/vue-countdown';
+</script>
+
+
 <template>
   <div class="container">
 
     <div class="countdown-frame">
-      test
+      <VueCountdown
+        :time="2 * 24 * 60 * 60 * 1000" v-slot="{ days, hours, minutes, seconds }">
+        Time Remaining：{{ days }} days, {{ hours }} hours, {{ minutes }} minutes, {{ seconds }} seconds.
+      </VueCountdown>
     </div>
     <router-view class="router-view"/>
   </div>

@@ -1,22 +1,26 @@
 <script setup>
-import VueCountdown from '@chenfengyuan/vue-countdown';
+import CountDown from "@/components/CountDown";
 </script>
 
 
 <template>
   <div class="container">
+<!--    <div>-->
+      <CountDown class="countdown-frame">
 
-    <div class="countdown-frame">
-      <VueCountdown
-        :time="2 * 24 * 60 * 60 * 1000" v-slot="{ days, hours, minutes, seconds }">
-        Time Remaining：{{ days }} days, {{ hours }} hours, {{ minutes }} minutes, {{ seconds }} seconds.
-      </VueCountdown>
-    </div>
+      </CountDown>
+
+<!--</div>-->
+
     <router-view class="router-view"/>
   </div>
 </template>
 
 <style lang="scss">
+body{
+  margin: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -31,7 +35,7 @@ import VueCountdown from '@chenfengyuan/vue-countdown';
 }
 .countdown-frame{
   position: absolute;
-  background: red;
+  background: #ffffff;
   top: 0;
   left: 0;
   right: 0;

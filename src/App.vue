@@ -1,14 +1,26 @@
+<script setup>
+import CountDown from "@/components/CountDown";
+</script>
+
+
 <template>
   <div class="container">
+<!--    <div>-->
+      <CountDown class="countdown-frame">
 
-    <div class="countdown-frame">
-      test
-    </div>
+      </CountDown>
+
+<!--</div>-->
+
     <router-view class="router-view"/>
   </div>
 </template>
 
 <style lang="scss">
+body{
+  margin: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -23,7 +35,7 @@
 }
 .countdown-frame{
   position: absolute;
-  background: red;
+  background: #ffffff;
   top: 0;
   left: 0;
   right: 0;

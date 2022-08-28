@@ -127,8 +127,15 @@ const particlesLoaded = async (container) => {
         color: {
             value: '#1f2f54'
         }
+
+
+    },
+    fullScreen: {
+      enable: true,
+      zIndex: -1
     }
   }">
+
 
   </ParticlesComponent>
 </template>

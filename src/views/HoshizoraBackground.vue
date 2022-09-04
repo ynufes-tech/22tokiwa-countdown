@@ -42,13 +42,13 @@ html, body {
 }
 
 .star--medium {
-  width: 6px;
-  height: 6px;
+  width: 4px;
+  height: 4px;
 }
 
 .star--big {
-  width: 9px;
-  height: 9px;
+  width: 5px;
+  height: 5px;
   box-shadow: 0 0 40px 0 #EDCDA3, 0 0 20px 0 #FFFFFF, inset 0 0 4px #FFFFFF;
 }
 

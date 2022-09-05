@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HoshizoraBackground from '../views/HoshizoraBackground.vue'
+import StarBackground from "@/views/StarBackground";
 
 const routes = [
   {
@@ -14,6 +15,11 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+  },
+  {
+    path:'/star',
+    name:'star',
+    component: StarBackground
   }
 ]
 
@@ -21,6 +27,5 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
-
 
 export default router

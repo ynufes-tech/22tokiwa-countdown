@@ -6,8 +6,13 @@ import VueCountdown from '@chenfengyuan/vue-countdown';
   <div class="countdown-frame">
     <VueCountdown
         :time="60 * 24 * 60 * 60 * 1000" v-slot="{ days, hours, minutes, seconds }">
-      常盤祭まで後
-      <br><span style="font-size: 3em">{{ days }} 日 {{ hours }} 時間 {{ minutes }} 分 {{ seconds }} 秒 </span>
+      <div class="countdown-label">常盤祭まであと</div>
+      <br><span class="count-down">
+      <span><span class="number">{{ days }}</span> <span>日</span>
+      <span class="number">{{ hours }}</span> <span>時間</span></span>
+      <span><span class="number">{{ minutes }}</span> <span>分</span>
+      <span class="number">{{ seconds }}</span> <span>秒</span></span>
+    </span>
     </VueCountdown>
   </div>
 </template>
@@ -18,6 +23,34 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.countdown-frame {
+  color: white;
 
+}
+
+.countdown-label {
+  font-size: 1.5em;
+  margin: -1em 0;
+}
+
+.count-down {
+  font-size: 4em;
+
+  > span .number {
+    display: inline-block;
+    font-size: 1em;
+    width: 1em;
+    text-align: right;
+    font-family: 'Petit Formal Script', cursive;
+  }
+
+  > span > span {
+    font-size: 0.5em;
+  }
+
+  > span {
+    display: inline-block;
+  }
+}
 </style>

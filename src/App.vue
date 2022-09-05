@@ -22,7 +22,7 @@ body{
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Klee One', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -35,7 +35,6 @@ body{
 }
 .countdown-frame{
   position: absolute;
-  background: #ffffff;
   top: 0;
   left: 0;
   right: 0;

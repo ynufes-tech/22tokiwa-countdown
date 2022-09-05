@@ -35,7 +35,6 @@ body{
 }
 .countdown-frame{
   position: absolute;
-  background: #ffffff;
   top: 0;
   left: 0;
   right: 0;

@@ -1,17 +1,11 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import HoshizoraBackground from '../views/HoshizoraBackground.vue'
-import StarBackground from "@/views/StarBackground";
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: HoshizoraBackground
-  },
-  {
-    path: '/star',
-    name: 'star',
-    component: StarBackground
   }
 ]
 

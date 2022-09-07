@@ -1,11 +1,16 @@
 <script setup>
 import VueCountdown from '@chenfengyuan/vue-countdown';
+
+// 時間を計算する。
+// 10月28日13:00のUNIX時間(1970年からのミリ秒)は1666929600000
+// 現在のUNIX時間(ミリ秒)を取得してその差をVueCountdownに渡す。
+let remainingTime = 1666929600000 - new Date().getTime();
 </script>
 
 <template>
   <div class="countdown-frame">
     <VueCountdown
-        :time="60 * 24 * 60 * 60 * 1000" v-slot="{ days, hours, minutes, seconds }">
+        :time="remainingTime" v-slot="{ days, hours, minutes, seconds }">
       <div class="countdown-label">常盤祭まであと</div>
       <br><span class="count-down">
       <span><span class="number">{{ days }}</span> <span>日</span>

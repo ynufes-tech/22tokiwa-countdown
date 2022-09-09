@@ -31,12 +31,10 @@ export default {
 <style scoped lang="scss">
 
 .countdown-label {
-  font-size: 1.5em;
   margin-bottom: -1em;
 }
 
 .count-down {
-  font-size: 4em;
 
   > span .number {
     display: inline-block;

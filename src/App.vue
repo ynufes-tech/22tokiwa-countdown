@@ -7,7 +7,7 @@ import CountDown from "@/components/CountDown";
   <div class="container">
     <div class="countdown-frame">
       <div class="theme">
-        <div class="theme-label">2022横浜国立大学<br>常盤祭テーマ</div>
+        <div class="theme-label">2022横浜国立大学<br>常盤祭 テーマ</div>
         <div class="theme-title">星彩</div>
       </div>
       <div class="date">開催期間: 10/28~30</div>
@@ -66,11 +66,11 @@ body{
 }
 
 .theme {
-  font-size: min(1.5vw, 5em);
+  font-size: min(1.5vw, 2vh);
 }
 
 .theme-title {
-  font-size: 8em;
+  font-size: 10em;
 }
 
 .theme-label {
@@ -81,7 +81,7 @@ body{
 .date{
   font-size: 1.2em;
   margin-top: -0.7em;
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
 
 .countdown-label{

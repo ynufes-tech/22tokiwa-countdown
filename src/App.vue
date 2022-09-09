@@ -17,7 +17,7 @@ import CountDown from "@/components/CountDown";
           <img src="@/assets/funding.webp" alt="クラウドファンディングのご案内"/>
         </a>
         <a href="">
-        <img src="@/assets/pokemon.webp" alt="ポケモン企画の紹介"/>
+          <img src="@/assets/pokemon.webp" alt="ポケモン企画の紹介"/>
         </a>
       </div>
     </div>
@@ -27,7 +27,7 @@ import CountDown from "@/components/CountDown";
 </template>
 
 <style lang="scss">
-body{
+body {
   margin: 0;
 }
 
@@ -39,13 +39,15 @@ body{
   color: #FFFFFF;
 }
 
-.image-button-area{
+.image-button-area {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 3vw;
-  >img{
+
+  img {
     width: min(40vw, 30vh);
+    aspect-ratio: 1;
   }
 }
 
@@ -82,17 +84,17 @@ body{
   margin-bottom: -1em;
 }
 
-.date{
+.date {
   font-size: 1.2em;
   margin-top: -0.7em;
   margin-bottom: 2em;
 }
 
-.countdown-label{
+.countdown-label {
   font-size: 1.5em;
 }
 
-.count-down{
+.count-down {
   font-size: 4em;
 }
 
@@ -109,25 +111,25 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 
-@media screen and (max-width: 520px){
+@media screen and (max-width: 520px) {
 
-  .theme-label{
+  .theme-label {
     font-size: 3em;
   }
 
-  .theme-title{
+  .theme-title {
     font-size: 12em;
   }
 
-  .date{
+  .date {
     font-size: 1em;
   }
 
-  .countdown-label{
+  .countdown-label {
     font-size: 1.5em;
   }
 
-  .count-down{
+  .count-down {
     font-size: 10vw;
   }
 }

@@ -13,8 +13,8 @@ import CountDown from "@/components/CountDown";
       <div class="date">開催期間: 10/28~30</div>
       <CountDown/>
       <div class="image-button-area">
-        <img src="@/assets/funding.png"/>
-        <img src="@/assets/pokemon.png"/>
+        <img src="@/assets/funding.png" alt="クラウドファンディングのご案内"/>
+        <img src="@/assets/pokemon.png" alt="ポケモン企画の紹介"/>
       </div>
     </div>
 

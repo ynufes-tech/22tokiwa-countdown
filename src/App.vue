@@ -7,11 +7,15 @@ import CountDown from "@/components/CountDown";
   <div class="container">
     <div class="countdown-frame">
       <div class="theme">
-        <div class="theme-label">2022横浜国立大学<br>常盤祭テーマ</div>
+        <div class="theme-label">2022横浜国立大学<br>常盤祭 テーマ</div>
         <div class="theme-title">星彩</div>
       </div>
       <div class="date">開催期間: 10/28~30</div>
       <CountDown/>
+      <div class="image-button-area">
+        <img src="@/assets/funding.webp" alt="クラウドファンディングのご案内"/>
+        <img src="@/assets/pokemon.webp" alt="ポケモン企画の紹介"/>
+      </div>
     </div>
 
     <router-view class="router-view"/>
@@ -30,6 +34,17 @@ body{
   text-align: center;
   color: #FFFFFF;
 }
+
+.image-button-area{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3vw;
+  >img{
+    width: min(40vw, 30vh);
+  }
+}
+
 
 .container {
   position: relative;
@@ -51,11 +66,11 @@ body{
 }
 
 .theme {
-  font-size: min(1.5vw, 5em);
+  font-size: min(1.5vw, 2vh);
 }
 
 .theme-title {
-  font-size: 8em;
+  font-size: 10em;
 }
 
 .theme-label {
@@ -66,7 +81,7 @@ body{
 .date{
   font-size: 1.2em;
   margin-top: -0.7em;
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
 
 .countdown-label{

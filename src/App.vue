@@ -69,6 +69,14 @@ body{
   margin-bottom: 5em;
 }
 
+.countdown-label{
+  font-size: 1.5em;
+}
+
+.count-down{
+  font-size: 4em;
+}
+
 nav {
   padding: 30px;
 }
@@ -89,11 +97,19 @@ nav a.router-link-exact-active {
   }
 
   .theme-title{
-    font-size: 10em;
+    font-size: 12em;
   }
 
   .date{
     font-size: 1em;
+  }
+
+  .countdown-label{
+    font-size: 1.5em;
+  }
+
+  .count-down{
+    font-size: 10vw;
   }
 }
 </style>

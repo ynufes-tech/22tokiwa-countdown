@@ -12,6 +12,10 @@ import CountDown from "@/components/CountDown";
       </div>
       <div class="date">開催期間: 10/28~30</div>
       <CountDown/>
+      <div class="image-button-area">
+        <img src="@/assets/funding.png"/>
+        <img src="@/assets/pokemon.png"/>
+      </div>
     </div>
 
     <router-view class="router-view"/>
@@ -30,6 +34,17 @@ body{
   text-align: center;
   color: #FFFFFF;
 }
+
+.image-button-area{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3vw;
+  >img{
+    width: min(40vw, 30vh);
+  }
+}
+
 
 .container {
   position: relative;

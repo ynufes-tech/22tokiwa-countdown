@@ -5,12 +5,14 @@ import CountDown from "@/components/CountDown";
 
 <template>
   <div class="container">
-<!--    <div>-->
-      <CountDown class="countdown-frame">
-
-      </CountDown>
-
-<!--</div>-->
+    <div class="countdown-frame">
+      <div class="theme">
+        <div class="theme-label">2022横浜国立大学<br>常盤祭テーマ</div>
+        <div class="theme-title">星彩</div>
+      </div>
+      <div class="date">開催期間: 10/28~30</div>
+      <CountDown/>
+    </div>
 
     <router-view class="router-view"/>
   </div>
@@ -26,24 +28,54 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #FFFFFF;
 }
-.container{
+
+.container {
   position: relative;
   height: 100vh;
   width: 100vw;
 }
-.countdown-frame{
+
+.countdown-frame {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: auto;
-  width: fit-content;
+  width: 100%;
   height: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 
+.theme {
+  font-size: min(1.5vw, 5em);
+}
+
+.theme-title {
+  font-size: 8em;
+}
+
+.theme-label {
+  font-size: 2em;
+  margin-bottom: -1em;
+}
+
+.date{
+  font-size: 1.2em;
+  margin-top: -0.7em;
+  margin-bottom: 5em;
+}
+
+.countdown-label{
+  font-size: 1.5em;
+}
+
+.count-down{
+  font-size: 4em;
+}
 
 nav {
   padding: 30px;
@@ -56,5 +88,28 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+@media screen and (max-width: 520px){
+
+  .theme-label{
+    font-size: 3em;
+  }
+
+  .theme-title{
+    font-size: 12em;
+  }
+
+  .date{
+    font-size: 1em;
+  }
+
+  .countdown-label{
+    font-size: 1.5em;
+  }
+
+  .count-down{
+    font-size: 10vw;
+  }
 }
 </style>

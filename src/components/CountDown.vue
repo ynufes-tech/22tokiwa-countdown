@@ -8,7 +8,7 @@ let remainingTime = 1666929600000 - new Date().getTime();
 </script>
 
 <template>
-  <div class="countdown-frame">
+  <div>
     <VueCountdown
         :time="remainingTime" v-slot="{ days, hours, minutes, seconds }">
       <div class="countdown-label">常盤祭まであと</div>
@@ -29,18 +29,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.countdown-frame {
-  color: white;
-
-}
 
 .countdown-label {
-  font-size: 1.5em;
-  margin: -1em 0;
+  margin-bottom: -1em;
 }
 
 .count-down {
-  font-size: 4em;
 
   > span .number {
     display: inline-block;

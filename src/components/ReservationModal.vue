@@ -23,14 +23,14 @@ defineExpose({
         </p>
         <h2><span>事前予約制への</span><span>申し込み方法</span></h2>
         <div class="event-application-buttons">
-          <a>
+          <a href="https://e-ve.event-form.jp/event/39275/TokiwaDay1" target="_blank" rel="noopener noreferrer">
             1日目(10/28)分はこちら
           </a>
-          <a>
-            2日目(10/28)分はこちら
+          <a href="https://e-ve.event-form.jp/event/39472/TokiwaDay2" target="_blank" rel="noopener noreferrer">
+            2日目(10/29)分はこちら
           </a>
-          <a>
-            3日目(10/28)分はこちら
+          <a href="https://e-ve.event-form.jp/event/39672/TokiwaDay3" target="_blank" rel="noopener noreferrer">
+            3日目(10/30)分はこちら
           </a>
         </div>
         <h2>定員について</h2>

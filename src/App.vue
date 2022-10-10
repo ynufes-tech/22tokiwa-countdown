@@ -1,10 +1,19 @@
 <script setup>
 import CountDown from "@/components/CountDown";
+import ReservationModal from "@/components/ReservationModal";
+import {ref} from "vue";
+
+const reservation_modal = ref(null)
+
+function openModal() {
+  reservation_modal.value.showModal = true;
+}
 </script>
 
 
 <template>
   <div class="container">
+    <ReservationModal ref="reservation_modal"/>
     <div class="countdown-frame">
       <div class="theme">
         <div class="theme-label">2022横浜国立大学<br>常盤祭 テーマ</div>
@@ -13,9 +22,7 @@ import CountDown from "@/components/CountDown";
       <div class="date">開催期間: 10/28~30</div>
       <CountDown/>
       <div class="image-button-area">
-        <a href="https://camp-fire.jp/projects/view/619125" target="_blank" rel="noopener noreferrer">
-          <img src="@/assets/funding.webp" alt="クラウドファンディングのご案内"/>
-        </a>
+        <img src="@/assets/reservation-1.webp" alt="事前予約制についてのご案内" @click="openModal()"/>
         <a href="https://www.pokemonunite.jp/ja/news/82/" target="_blank" rel="noopener noreferrer">
           <img src="@/assets/pokemon.webp" alt="ポケモン企画の紹介"/>
         </a>
@@ -46,6 +53,7 @@ body {
   gap: 3vw;
 
   img {
+    object-fit: cover;
     width: min(40vw, 30vh);
     aspect-ratio: 1;
   }

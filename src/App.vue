@@ -22,7 +22,7 @@ function openModal() {
       <div class="date">開催期間: 10/28~30</div>
       <CountDown/>
       <div class="image-button-area">
-        <img src="@/assets/reservation-1.webp" alt="事前予約制についてのご案内" @click="openModal()"/>
+        <img src="@/assets/reservation-1.webp" alt="事前予約制についてのご案内" @click="openModal()" class="reservation-button"/>
         <a href="https://www.pokemonunite.jp/ja/news/82/" target="_blank" rel="noopener noreferrer">
           <img src="@/assets/pokemon.webp" alt="ポケモン企画の紹介"/>
         </a>
@@ -90,6 +90,9 @@ body {
 .theme-label {
   font-size: 2em;
   margin-bottom: -1em;
+}
+.reservation-button{
+  cursor: pointer;
 }
 
 .date {

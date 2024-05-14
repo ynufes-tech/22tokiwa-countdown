@@ -16,7 +16,7 @@ import CountDown from "@/components/CountDown";
         <a href="https://camp-fire.jp/projects/view/619125" target="_blank" rel="noopener noreferrer">
           <img src="@/assets/funding.webp" alt="クラウドファンディングのご案内"/>
         </a>
-        <a>
+        <a href="https://www.pokemonunite.jp/ja/news/82/" target="_blank" rel="noopener noreferrer">
           <img src="@/assets/pokemon.webp" alt="ポケモン企画の紹介"/>
         </a>
       </div>

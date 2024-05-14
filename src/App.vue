@@ -1,10 +1,19 @@
 <script setup>
 import CountDown from "@/components/CountDown";
+import ReservationModal from "@/components/ReservationModal";
+import {ref} from "vue";
+
+const reservation_modal = ref(null)
+
+function openModal() {
+  reservation_modal.value.showModal = true;
+}
 </script>
 
 
 <template>
   <div class="container">
+    <ReservationModal ref="reservation_modal"/>
     <div class="countdown-frame">
       <div class="theme">
         <div class="theme-label">2022横浜国立大学<br>常盤祭 テーマ</div>
@@ -13,8 +22,10 @@ import CountDown from "@/components/CountDown";
       <div class="date">開催期間: 10/28~30</div>
       <CountDown/>
       <div class="image-button-area">
-        <img src="@/assets/funding.webp" alt="クラウドファンディングのご案内"/>
-        <img src="@/assets/pokemon.webp" alt="ポケモン企画の紹介"/>
+        <img src="@/assets/reservation-1.webp" alt="事前予約制についてのご案内" @click="openModal()" class="reservation-button"/>
+        <a href="https://www.pokemonunite.jp/ja/news/82/" target="_blank" rel="noopener noreferrer">
+          <img src="@/assets/pokemon.webp" alt="ポケモン企画の紹介"/>
+        </a>
       </div>
     </div>
 
@@ -23,7 +34,7 @@ import CountDown from "@/components/CountDown";
 </template>
 
 <style lang="scss">
-body{
+body {
   margin: 0;
 }
 
@@ -35,13 +46,16 @@ body{
   color: #FFFFFF;
 }
 
-.image-button-area{
+.image-button-area {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 3vw;
-  >img{
+
+  img {
+    object-fit: cover;
     width: min(40vw, 30vh);
+    aspect-ratio: 1;
   }
 }
 
@@ -77,18 +91,21 @@ body{
   font-size: 2em;
   margin-bottom: -1em;
 }
+.reservation-button{
+  cursor: pointer;
+}
 
-.date{
+.date {
   font-size: 1.2em;
   margin-top: -0.7em;
   margin-bottom: 2em;
 }
 
-.countdown-label{
+.countdown-label {
   font-size: 1.5em;
 }
 
-.count-down{
+.count-down {
   font-size: 4em;
 }
 
@@ -105,25 +122,25 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 
-@media screen and (max-width: 520px){
+@media screen and (max-width: 520px) {
 
-  .theme-label{
+  .theme-label {
     font-size: 3em;
   }
 
-  .theme-title{
+  .theme-title {
     font-size: 12em;
   }
 
-  .date{
+  .date {
     font-size: 1em;
   }
 
-  .countdown-label{
+  .countdown-label {
     font-size: 1.5em;
   }
 
-  .count-down{
+  .count-down {
     font-size: 10vw;
   }
 }
